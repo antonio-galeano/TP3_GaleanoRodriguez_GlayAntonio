@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Cuisine Facile</title>
+  </head>
+
+  <body>
+    <!-- ====== Header Section ====== -->
+    <!-- ====== With right-aligned nav:  https://tailwindui.com/components/marketing/elements/headers ====== -->
+    <header class="bg-white">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Cuisine Facile</span>
+          <img class="h-8 w-auto" src="img/logo.png" alt="" />
+        </a>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="index.html" class="text-sm font-semibold leading-6 text-gray-900"
+            >Accueil</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Recettes</a
+          >
+          <a href="a-propos.html" class="text-sm font-semibold leading-6 text-gray-900"
+            >À propos</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Se connecter <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </nav>
+
+      <div
+        class="hidden lg:hidden"
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Cuisine Facile</span>
+              <img class="h-8 w-auto" src="img/logo.png" alt="" />
+            </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="close-menu"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="index.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Accueil</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Recettes</a
+                >
+                <a
+                  href="a-propos.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >À propos</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Se connecter </a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ====== Header Section End ====== -->
+
+    <main>
+      <!-- ====== Recipes Slider Section ====== -->
+      <!-- ====== Three-column with background images: ====== -->
+      <!-- ======  https://tailwindui.com/components/marketing/sections/blog-sections ====== -->
+      
+      <div class="bg-white py-24 sm:py-32" x-data="{ currentSlide: 0, totalSlides: 8, visibleSlides: 4 }">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lorem ipsume</h2>
+            <p class="mt-2 text-lg leading-8 text-gray-600">Duis aute irure dolor in reprehenderit in voluptate ve.</p>
+          </div>
+          <div class="relative mt-16 overflow-hidden">
+            <div class="flex transition-transform duration-300" :style="{ transform: `translateX(-${currentSlide * 100 / visibleSlides}%)` }">
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #1', date: 'Date #1', imgSrc: 'img/slider/1.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 1" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #2', date: 'Date #2', imgSrc: 'img/slider/2.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 2" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #3', date: 'Date #3', imgSrc: 'img/slider/3.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 3" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #4', date: 'Date #4', imgSrc: 'img/slider/4.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 4" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #5', date: 'Date #5', imgSrc: 'img/slider/5.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 5" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #6', date: 'Date #6', imgSrc: 'img/slider/6.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 6" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #7', date: 'Date #7', imgSrc: 'img/slider/7.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 7" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="w-1/4 flex-shrink-0 p-2" x-data="{ title: 'Titre #8', date: 'Date #8', imgSrc: 'img/slider/8.jpg', link: '#' }">
+                <a :href="link" target="_blank" class="block">
+                  <article class="relative overflow-hidden rounded-2xl bg-gray-900">
+                    <img :src="imgSrc" alt="Image 8" class="w-full h-64 object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900">
+                      <h3 class="text-lg font-semibold text-white" x-text="title"></h3>
+                      <p class="text-sm text-gray-300">Publié le <time x-text="date"></time></p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <div class="absolute inset-y-0 left-0 flex items-center">
+              <button @click="currentSlide = Math.max(currentSlide - 1, 0)" class="bg-gray-800 text-white rounded-full p-2">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center">
+              <button @click="currentSlide = Math.min(currentSlide + 1, totalSlides - visibleSlides)" class="bg-gray-800 text-white rounded-full p-2">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+      <!-- ====== Recipes Slider Section End ====== -->
+
+      <!-- ====== Shopping Section ====== -->
+      <!-- ====== Three-column with images: 
+         https://tailwindui.com/components/marketing/sections/blog-sections ====== -->
+
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2
+              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Lorem ipsume
+            </h2>
+            <p class="mt-2 text-lg leading-8 text-gray-600">
+              Duis aute irure dolor in reprehenderit in voluptate ve.
+            </p>
+          </div>
+          <div
+            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+          >
+            <article class="flex flex-col items-start justify-between">
+              <div class="relative w-full">
+                <img
+                  src="img/highlights/1.jpg"
+                  alt=""
+                  class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                />
+                <div
+                  class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+                ></div>
+              </div>
+              <div class="max-w-xl">
+                <div class="mt-8 flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >Mar 16, 2020</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Sous-titre 1</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Duis aute irure dolor volu
+                    </a>
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="img/highlights/placeholder.jpg"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-100"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Michael Foster
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Co-Founder / CTO</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="flex flex-col items-start justify-between">
+              <div class="relative w-full">
+                <img
+                  src="img/highlights/2.jpg"
+                  alt=""
+                  class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                />
+                <div
+                  class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+                ></div>
+              </div>
+              <div class="max-w-xl">
+                <div class="mt-8 flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >Mar 16, 2020</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Sous-titre 2</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Duis aute irure dolor volu
+                    </a>
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="img/highlights/placeholder.jpg"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-100"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Michael Foster
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Co-Founder / CTO</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="flex flex-col items-start justify-between">
+              <div class="relative w-full">
+                <img
+                  src="img/highlights/4.jpg"
+                  alt=""
+                  class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                />
+                <div
+                  class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+                ></div>
+              </div>
+              <div class="max-w-xl">
+                <div class="mt-8 flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >Mar 16, 2020</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Sous-titre 3</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Duis aute irure dolor volu
+                    </a>
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="img/highlights/placeholder.jpg"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-100"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Michael Foster
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Co-Founder / CTO</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="flex flex-col items-start justify-between">
+              <div class="relative w-full">
+                <img
+                  src="img/highlights/4.jpg"
+                  alt=""
+                  class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                />
+                <div
+                  class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+                ></div>
+              </div>
+              <div class="max-w-xl">
+                <div class="mt-8 flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >Mar 16, 2020</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Sous-titre 4</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Duis aute irure dolor volu
+                    </a>
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="img/highlights/placeholder.jpg"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-100"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Michael Foster
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Co-Founder / CTO</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <!-- ====== Shopping Section End ====== -->
+      
+
+      <!-- ====== Tricks Section ====== -->
+      <!-- ====== Single-column with images:
+         https://tailwindui.com/components/marketing/sections/blog-sections ====== -->
+
+         <div class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div class="mx-auto max-w-2xl lg:max-w-none text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lorem ipsume</h2>
+                <p class="mt-2 text-lg leading-8 text-gray-600">Duis aute irure dolor in reprehenderit in voluptate ve.</p>
+              </div>
+              <div class="mt-16 lg:mt-20 lg:flex lg:gap-8">
+                <!-- Left Column -->
+                <div class="lg:w-1/3 flex flex-col items-center">
+                  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lorem Ipsume</h2>
+                  <div class="relative mt-8 w-full aspect-[3/4]">
+                    <img src="img/articles/l.jpg" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                  </div>
+                </div>
+                <!-- Right Column -->
+                <div class="lg:w-2/3">
+                  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lorem Ipsume</h2>
+                  <div class="mt-16 space-y-20 lg:mt-8 lg:space-y-20">
+                    <article class="relative isolate flex flex-col gap-8 lg:flex-row">
+                      <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+                        <img src="img/articles/r1.jpg" alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                      </div>
+                      <div>
+                        <div class="flex items-center gap-x-4 text-xs">
+                          <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+                          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Sous-titre</a>
+                        </div>
+                        <div class="group relative max-w-xl">
+                          <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                            <a href="#">
+                              <span class="absolute inset-0"></span>
+                              Duis aute irure dolor volu
+                            </a>
+                          </h3>
+                          <p class="mt-5 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.</p>
+                        </div>
+                        <div class="mt-6 flex border-t border-gray-900/5 pt-6">
+                          <div class="relative flex items-center gap-x-4">
+                            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                            <div class="text-sm leading-6">
+                              <p class="font-semibold text-gray-900">
+                                <a href="#">
+                                  <span class="absolute inset-0"></span>
+                                  Michael Foster
+                                </a>
+                              </p>
+                              <p class="text-gray-600">Co-Founder / CTO</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- More articles here... -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+      <!-- ====== Tricks Section End ====== -->
+    </main>
+
+    <!-- ====== Footer Section -->
+    <!-- ====== Simple centered: https://tailwindui.com/components/marketing/sections/footers -->
+    <footer class="bg-gray-100" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          <img class="h-7" src="img/logo.png" alt="Loremes name" />
+          <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Loremes
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Loremes
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Loremes
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Pellentesque</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Loremes
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Réclamations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Vie Privée</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >Conditions d'utilisation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== Footer Section End -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
