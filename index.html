@@ -1,935 +1,620 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/script.js" defer></script>
-    <title>Cuisine Facile</title>
-  </head>
 
-  <body>
-    <!-- ====== Header Section ====== -->
-    <!-- ====== With right-aligned nav:  https://tailwindui.com/components/marketing/elements/headers ====== -->
-    <header class="bg-white">
-      <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
-      >
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Cuisine Facile</span>
-          <img class="h-8 w-auto" src="img/logo.png" alt="" />
-        </a>
-        <div class="flex lg:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Accueil</a
-          >
-          <a href="recettes.html" class="text-sm font-semibold leading-6 text-gray-900"
-            >Recettes</a
-          >
-          <a href="a-propos.html" class="text-sm font-semibold leading-6 text-gray-900"
-            >À propos</a
-          >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Se connecter <span aria-hidden="true">&rarr;</span></a
-          >
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/script.js" defer></script>
+  <title>Cuisine Facile</title>
+</head>
 
+<body>
+  <!-- ====== Header Section ====== -->
+  <!-- ====== With right-aligned nav:  https://tailwindui.com/components/marketing/elements/headers ====== -->
+  <header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Cuisine Facile</span>
+        <img class="h-8 w-auto" src="img/logo.png" alt="Logo de Cuisine Facile" />
+      </a>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Accueil</a>
+        <a href="recettes.html" class="text-sm font-semibold leading-6 text-gray-900">Recettes</a>
+        <a href="a-propos.html" class="text-sm font-semibold leading-6 text-gray-900">À propos</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Se connecter <span
+            aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="lg:hidden" id="mobile-menu" role="dialog" aria-modal="true">
       <div
-        class="hidden lg:hidden"
-        id="mobile-menu"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div class="fixed inset-0 z-10"></div>
-        <div
-          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-        >
+        class="absolute top-14 inset-x-0 z-20 bg-white shadow-md transition-all transform origin-top-right overflow-y-auto max-h-[75vh]">
+        <div class="p-5">
           <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Cuisine Facile</span>
-              <img class="h-8 w-auto" src="img/logo.png" alt="" />
-            </a>
-            <button
-              type="button"
-              class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              id="close-menu"
-            >
-              <span class="sr-only">Close menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
+            <a href="#" class="-m-1.5 p-1.5"> </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
+              <span class="sr-only">Close menu</span>
             </button>
           </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Accueil</a
-                >
-                <a
-                  href="recettes.html"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Recettes</a
-                >
-                <a
-                  href="a-propos.html"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >À propos</a
-                >
-              </div>
-              <div class="py-6">
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Se connecter </a
-                >
-              </div>
-            </div>
+          <div class="mt-3 space-y-1">
+            <a href="#"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Accueil</a>
+            <a href="recettes.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Recettes</a>
+            <a href="a-propos.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">À propos</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Se
+              connecter</a>
           </div>
         </div>
       </div>
-    </header>
-    <!-- ====== Header Section End ====== -->
+    </div>
+  </header>
+  <!-- ====== Header Section End ====== -->
 
-    <main>
-      <!-- ====== Hero Section ====== -->
-      <div class="relative isolate">
-        <div class="overflow-hidden">
-          <div
-            class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-0"
-          >
-            <div
-              class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
-            >
-              <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1
-                  class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
-                >
-                  Lorem ipsum dolor sit amet.
-                </h1>
-                <p
-                  class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
-                >
-                  Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
-                  quis cupidatat mollit aute velit. Et labore commodo nulla
-                  aliqua proident mollit ullamco exercitation tempor. Sint
-                  aliqua anim nulla sunt mollit id pariatur in voluptate cillum.
-                </p>
-                <div class="mt-10 flex items-center gap-x-6">
-                  <a
-                    href="#"
-                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >Lorem id</a
-                  >
-                  <a
-                    href="#"
-                    class="text-sm font-semibold leading-6 text-gray-900"
-                    >Sit amet <span aria-hidden="true">→</span></a
-                  >
-                </div>
+  <main>
+    <!-- ====== Hero Section ====== -->
+    <div class="relative isolate main-content-section">
+      <div class="overflow-hidden">
+        <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-0">
+          <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+            <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Lorem ipsum dolor sit amet.
+              </h1>
+              <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
+                quis cupidatat mollit aute velit. Et labore commodo nulla
+                aliqua proident mollit ullamco exercitation tempor. Sint
+                aliqua anim nulla sunt mollit id pariatur in voluptate cillum.
+              </p>
+              <div class="mt-10 flex items-center gap-x-6">
+                <a href="#"
+                  class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lorem
+                  id</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Sit amet <span
+                    aria-hidden="true">→</span></a>
               </div>
+            </div>
+            <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
               <div
-                class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
-              >
-                <div
-                  class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
-                >
-                  <a href="#" class="relative block">
-                    <img
-                      src="img/hero/vegetarian.jpg"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center"
-                    >
-                      Végétarien
-                    </div>
-                  </a>
+                class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                <a href="#" class="relative block">
+                  <img src="img/hero/vegetarian.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                    Végétarien
+                  </div>
+                </a>
+              </div>
+              <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                <a href="#" class="relative block">
+                  <img src="img/hero/soups.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                    Soupes
+                  </div>
+                </a>
+                <a href="#" class="relative block">
+                  <img src="img/hero/salads.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                    Salades
+                  </div>
+                </a>
+              </div>
+              <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0 lg:pt-36">
+                <a href="#" class="relative block">
+                  <img src="img/hero/desserts.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                    Desserts
+                  </div>
+                </a>
+                <a href="#" class="relative block">
+                  <img src="img/hero/popular.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                    Populaire
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== Hero Section End ====== -->
+
+    <!-- ====== Media Logos Section ====== -->
+    <!-- ====== Simple with heading: https://tailwindui.com/components/marketing/sections/logo-clouds ====== -->
+
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
+          Cuisine Facile® dans les médias
+        </h2>
+        <div
+          class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/1.png" alt="Transistor"
+            width="158" height="48" />
+          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/2.png" alt="Reform"
+            width="158" height="48" />
+          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/3.png" alt="Tuple"
+            width="158" height="48" />
+          <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="img/media/4.png"
+            alt="SavvyCal" width="158" height="48" />
+          <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+            src="img/media/5.png" alt="Statamic" width="158" height="48" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== Media Logos Section End ====== -->
+
+    <!-- ====== Feature Section 1 ====== -->
+    <!-- ====== With product screenshot on left: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
+
+    <div class="overflow-hidden bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Maiores impeditre
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maiores impedit perferendis suscipit eaque, iste dolor
+                cupiditate blanditiis ratione.
+              </p>
+              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Maiores impedit perferendis suscipit eaque, iste dolor
+                    cupiditate blanditiis ratione.
+                  </dd>
                 </div>
-                <div
-                  class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36"
-                >
-                  <a href="#" class="relative block">
-                    <img
-                      src="img/hero/soups.jpg"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center"
-                    >
-                      Soupes
-                    </div>
-                  </a>
-                  <a href="#" class="relative block">
-                    <img
-                      src="img/hero/salads.jpg"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center"
-                    >
-                      Salades
-                    </div>
-                  </a>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                    irure qui lorem cupidatat commodo.
+                  </dd>
                 </div>
-                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0 lg:pt-36">
-                  <a href="#" class="relative block">
-                    <img
-                      src="img/hero/desserts.jpg"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center"
-                    >
-                      Desserts
-                    </div>
-                  </a>
-                  <a href="#" class="relative block">
-                    <img
-                      src="img/hero/popular.jpg"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center"
-                    >
-                      Populaire
-                    </div>
-                  </a>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path
+                        d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                      <path fill-rule="evenodd"
+                        d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Ac tincidunt sapien vehicula erat auctor pellentesque
+                    rhoncus. Et magna sit morbi lobortis.
+                  </dd>
                 </div>
-              </div>
+              </dl>
             </div>
+          </div>
+          <div class="flex items-start justify-end lg:order-first">
+            <img src="img/features/1.jpeg" alt="Product screenshot"
+              class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432"
+              height="1442" />
           </div>
         </div>
       </div>
-      <!-- ====== Hero Section End ====== -->
+    </div>
+    <!-- ====== Feature Section 1 End ====== -->
 
-      <!-- ====== Logos Section ====== -->
-      <!-- ====== Simple with heading: https://tailwindui.com/components/marketing/sections/logo-clouds ====== -->
+    <!-- ====== Feature Section 2 ====== -->
+    <!-- ====== With product screenshot: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
 
-      <div class="bg-white py-24 sm:py-32">
+    <div class="overflow-hidden bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Maiores impeditre
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maiores impedit perferendis suscipit eaque, iste dolor
+                cupiditate blanditiis ratione.
+              </p>
+              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Maiores impedit perferendis suscipit eaque, iste dolor
+                    cupiditate blanditiis ratione.
+                  </dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                    irure qui lorem cupidatat commodo.
+                  </dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path
+                        d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                      <path fill-rule="evenodd"
+                        d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Ac tincidunt sapien vehicula erat auctor pellentesque
+                    rhoncus. Et magna sit morbi lobortis.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <img src="img/features/2.jpeg" alt="Product screenshot"
+            class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            width="2432" height="1442" />
+        </div>
+      </div>
+    </div>
+    <!-- ====== Feature Section 2 End ====== -->
+
+    <!-- ====== Feature Section 3 ====== -->
+    <!-- ====== With product screenshot on left: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
+
+    <div class="overflow-hidden bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Maiores impeditre
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maiores impedit perferendis suscipit eaque, iste dolor
+                cupiditate blanditiis ratione.
+              </p>
+              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Maiores impedit perferendis suscipit eaque, iste dolor
+                    cupiditate blanditiis ratione.
+                  </dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                    irure qui lorem cupidatat commodo.
+                  </dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path
+                        d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                      <path fill-rule="evenodd"
+                        d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Blanditiis ratione.
+                  </dt>
+                  <dd class="inline">
+                    Ac tincidunt sapien vehicula erat auctor pellentesque
+                    rhoncus. Et magna sit morbi lobortis.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="flex items-start justify-end lg:order-first">
+            <img src="img/features/3.jpeg" alt="Product screenshot"
+              class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432"
+              height="1442" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== Feature Section 3 End ====== -->
+
+    <!-- ====== Feature Section 4 ====== -->
+    <!-- ====== With large screenshot: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
+
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl sm:text-center">
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Qui irure qui lorem cupi.
+          </p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            impedit perferendis suscipit eaque, iste dolor cupiditate
+            blanditiis.
+          </p>
+        </div>
+      </div>
+      <div class="relative overflow-hidden pt-16">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
-            Cuisine Facile® dans les médias
-          </h2>
-          <div
-            class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
-          >
-            <img
-              class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="img/media/1.png"
-              alt="Transistor"
-              width="158"
-              height="48"
-            />
-            <img
-              class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="img/media/2.png"
-              alt="Reform"
-              width="158"
-              height="48"
-            />
-            <img
-              class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="img/media/3.png"
-              alt="Tuple"
-              width="158"
-              height="48"
-            />
-            <img
-              class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="img/media/4.png"
-              alt="SavvyCal"
-              width="158"
-              height="48"
-            />
-            <img
-              class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="img/media/5.png"
-              alt="Statamic"
-              width="158"
-              height="48"
-            />
+          <img src="img/features/book.jpg" alt="App screenshot"
+            class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432" height="1442" />
+          <div class="relative" aria-hidden="true">
+            <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"></div>
           </div>
         </div>
       </div>
+      <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+        <dl
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">
+              <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                  clip-rule="evenodd" />
+              </svg>
+              Blanditiis ratione.
+            </dt>
+            <dd class="inline">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id
+              magna.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">
+              <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                  clip-rule="evenodd" />
+              </svg>
+              Blanditiis ratione.
+            </dt>
+            <dd class="inline">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">
+              <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                  clip-rule="evenodd" />
+              </svg>
+              Elit aute id mag.
+            </dt>
+            <dd class="inline">
+              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">
+              <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M10 2.5c-1.31 0-2.526.386-3.546 1.051a.75.75 0 01-.82-1.256A8 8 0 0118 9a22.47 22.47 0 01-1.228 7.351.75.75 0 11-1.417-.49A20.97 20.97 0 0016.5 9 6.5 6.5 0 0010 2.5zM4.333 4.416a.75.75 0 01.218 1.038A6.466 6.466 0 003.5 9a7.966 7.966 0 01-1.293 4.362.75.75 0 01-1.257-.819A6.466 6.466 0 002 9c0-1.61.476-3.11 1.295-4.365a.75.75 0 011.038-.219zM10 6.12a3 3 0 00-3.001 3.041 11.455 11.455 0 01-2.697 7.24.75.75 0 01-1.148-.965A9.957 9.957 0 005.5 9c0-.028.002-.055.004-.082a4.5 4.5 0 018.996.084V9.15l-.005.297a.75.75 0 11-1.5-.034c.003-.11.004-.219.005-.328a3 3 0 00-3-2.965zm0 2.13a.75.75 0 01.75.75c0 3.51-1.187 6.745-3.181 9.323a.75.75 0 11-1.186-.918A13.687 13.687 0 009.25 9a.75.75 0 01.75-.75zm3.529 3.698a.75.75 0 01.584.885 18.883 18.883 0 01-2.257 5.84.75.75 0 11-1.29-.764 17.386 17.386 0 002.078-5.377.75.75 0 01.885-.584z"
+                  clip-rule="evenodd" />
+              </svg>
+              Elit aute id mag.
+            </dt>
+            <dd class="inline">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id
+              magna.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">
+              <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M7.84 1.804A1 1 0 018.82 1h2.36a1 1 0 01.98.804l.331 1.652a6.993 6.993 0 011.929 1.115l1.598-.54a1 1 0 011.186.447l1.18 2.044a1 1 0 01-.205 1.251l-1.267 1.113a7.047 7.047 0 010 2.228l1.267 1.113a1 1 0 01.206 1.25l-1.18 2.045a1 1 0 01-1.187.447l-1.598-.54a6.993 6.993 0 01-1.929 1.115l-.33 1.652a1 1 0 01-.98.804H8.82a1 1 0 01-.98-.804l-.331-1.652a6.993 6.993 0 01-1.929-1.115l-1.598.54a1 1 0 01-1.186-.447l-1.18-2.044a1 1 0 01.205-1.251l1.267-1.114a7.05 7.05 0 010-2.227L1.821 7.773a1 1 0 01-.206-1.25l1.18-2.045a1 1 0 011.187-.447l1.598.54A6.993 6.993 0 017.51 3.456l.33-1.652zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd" />
+              </svg>
+              Elit aute id mag.
+            </dt>
+            <dd class="inline">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">
+              <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                <path fill-rule="evenodd"
+                  d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
+                  clip-rule="evenodd" />
+              </svg>
+              Blanditiis ratione.
+            </dt>
+            <dd class="inline">
+              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
-      <!-- ====== Logos Section End ====== -->
+    <!-- ====== Feature Section 4 End ====== -->
+  </main>
 
-      <!-- ====== Feature Section 1 ====== -->
-      <!-- ====== With product screenshot on left: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
-
-      <div class="overflow-hidden bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-          >
-            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base font-semibold leading-7 text-indigo-600">
-                  Lorem ipsum
-                </h2>
-                <p
-                  class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-                >
-                  Maiores impeditre
-                </p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </p>
-                <dl
-                  class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
-                >
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
-                    </dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui lorem cupidatat commodo.
-                    </dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </dd>
-                  </div>
-                </dl>
-              </div>
+  <!-- ====== Footer Section -->
+  <!-- ====== Simple centered: https://tailwindui.com/components/marketing/sections/footers -->
+  <footer class="bg-gray-100" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <img class="h-7" src="img/logo.png" alt="Loremes name" />
+        <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                Loremes
+              </h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+              </ul>
             </div>
-            <div class="flex items-start justify-end lg:order-first">
-              <img
-                src="img/features/1.jpeg"
-                alt="Product screenshot"
-                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-                width="2432"
-                height="1442"
-              />
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                Loremes
+              </h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- ====== Feature Section 1 End ====== -->
-
-      <!-- ====== Feature Section 2 ====== -->
-      <!-- ====== With product screenshot: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
-
-      <div class="overflow-hidden bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-          >
-            <div class="lg:pr-8 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base font-semibold leading-7 text-indigo-600">
-                  Lorem ipsum
-                </h2>
-                <p
-                  class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-                >
-                  Maiores impeditre
-                </p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </p>
-                <dl
-                  class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
-                >
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
-                    </dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui lorem cupidatat commodo.
-                    </dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </dd>
-                  </div>
-                </dl>
-              </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                Loremes
+              </h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pellentesque</a>
+                </li>
+              </ul>
             </div>
-            <img
-              src="img/features/2.jpeg"
-              alt="Product screenshot"
-              class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-              width="2432"
-              height="1442"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- ====== Feature Section 2 End ====== -->
-
-      <!-- ====== Feature Section 3 ====== -->
-      <!-- ====== With product screenshot on left: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
-
-      <div class="overflow-hidden bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-          >
-            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
-              <div class="lg:max-w-lg">
-                <h2 class="text-base font-semibold leading-7 text-indigo-600">
-                  Lorem ipsum
-                </h2>
-                <p
-                  class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-                >
-                  Maiores impeditre
-                </p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </p>
-                <dl
-                  class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
-                >
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
-                    </dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui lorem cupidatat commodo.
-                    </dd>
-                  </div>
-                  <div class="relative pl-9">
-                    <dt class="inline font-semibold text-gray-900">
-                      <svg
-                        class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      Blanditiis ratione.
-                    </dt>
-                    <dd class="inline">
-                      Ac tincidunt sapien vehicula erat auctor pellentesque
-                      rhoncus. Et magna sit morbi lobortis.
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-            <div class="flex items-start justify-end lg:order-first">
-              <img
-                src="img/features/3.jpeg"
-                alt="Product screenshot"
-                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-                width="2432"
-                height="1442"
-              />
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                Loremes
+              </h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Réclamations</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Vie Privée</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Conditions d'utilisation</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <!-- ====== Feature Section 3 End ====== -->
+    </div>
+  </footer>
+  <!-- ====== Footer Section End -->
+</body>
 
-      <!-- ====== Feature Section 4 ====== -->
-      <!-- ====== With large screenshot: https://tailwindui.com/components/marketing/sections/feature-sections ====== -->
-
-      <div class="bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl sm:text-center">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">
-              Sit amet consectetur
-            </h2>
-            <p
-              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-            >
-              Qui irure qui lorem cupi.
-            </p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis.
-            </p>
-          </div>
-        </div>
-        <div class="relative overflow-hidden pt-16">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <img
-              src="img/features/book.jpg"
-              alt="App screenshot"
-              class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-              width="2432"
-              height="1442"
-            />
-            <div class="relative" aria-hidden="true">
-              <div
-                class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-          <dl
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
-          >
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Blanditiis ratione.
-              </dt>
-              <dd class="inline">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id
-                magna.
-              </dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Blanditiis ratione.
-              </dt>
-              <dd class="inline">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo.
-              </dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Elit aute id mag.
-              </dt>
-              <dd class="inline">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-              </dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 2.5c-1.31 0-2.526.386-3.546 1.051a.75.75 0 01-.82-1.256A8 8 0 0118 9a22.47 22.47 0 01-1.228 7.351.75.75 0 11-1.417-.49A20.97 20.97 0 0016.5 9 6.5 6.5 0 0010 2.5zM4.333 4.416a.75.75 0 01.218 1.038A6.466 6.466 0 003.5 9a7.966 7.966 0 01-1.293 4.362.75.75 0 01-1.257-.819A6.466 6.466 0 002 9c0-1.61.476-3.11 1.295-4.365a.75.75 0 011.038-.219zM10 6.12a3 3 0 00-3.001 3.041 11.455 11.455 0 01-2.697 7.24.75.75 0 01-1.148-.965A9.957 9.957 0 005.5 9c0-.028.002-.055.004-.082a4.5 4.5 0 018.996.084V9.15l-.005.297a.75.75 0 11-1.5-.034c.003-.11.004-.219.005-.328a3 3 0 00-3-2.965zm0 2.13a.75.75 0 01.75.75c0 3.51-1.187 6.745-3.181 9.323a.75.75 0 11-1.186-.918A13.687 13.687 0 009.25 9a.75.75 0 01.75-.75zm3.529 3.698a.75.75 0 01.584.885 18.883 18.883 0 01-2.257 5.84.75.75 0 11-1.29-.764 17.386 17.386 0 002.078-5.377.75.75 0 01.885-.584z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Elit aute id mag.
-              </dt>
-              <dd class="inline">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id
-                magna.
-              </dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.84 1.804A1 1 0 018.82 1h2.36a1 1 0 01.98.804l.331 1.652a6.993 6.993 0 011.929 1.115l1.598-.54a1 1 0 011.186.447l1.18 2.044a1 1 0 01-.205 1.251l-1.267 1.113a7.047 7.047 0 010 2.228l1.267 1.113a1 1 0 01.206 1.25l-1.18 2.045a1 1 0 01-1.187.447l-1.598-.54a6.993 6.993 0 01-1.929 1.115l-.33 1.652a1 1 0 01-.98.804H8.82a1 1 0 01-.98-.804l-.331-1.652a6.993 6.993 0 01-1.929-1.115l-1.598.54a1 1 0 01-1.186-.447l-1.18-2.044a1 1 0 01.205-1.251l1.267-1.114a7.05 7.05 0 010-2.227L1.821 7.773a1 1 0 01-.206-1.25l1.18-2.045a1 1 0 011.187-.447l1.598.54A6.993 6.993 0 017.51 3.456l.33-1.652zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Elit aute id mag.
-              </dt>
-              <dd class="inline">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo.
-              </dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Blanditiis ratione.
-              </dt>
-              <dd class="inline">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-
-      <!-- ====== Feature Section 4 End ====== -->
-    </main>
-
-    <!-- ====== Footer Section -->
-    <!-- ====== Simple centered: https://tailwindui.com/components/marketing/sections/footers -->
-    <footer class="bg-gray-100" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" class="sr-only">Footer</h2>
-      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
-        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-          <img class="h-7" src="img/logo.png" alt="Loremes name" />
-          <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">
-                  Loremes
-                </h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-10 md:mt-0">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">
-                  Loremes
-                </h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">
-                  Loremes
-                </h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Pellentesque</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-10 md:mt-0">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">
-                  Loremes
-                </h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Réclamations</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Vie Privée</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                      >Conditions d'utilisation</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- ====== Footer Section End -->
-  </body>
 </html>
