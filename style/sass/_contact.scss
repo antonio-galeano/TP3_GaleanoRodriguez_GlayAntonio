@@ -1,9 +1,8 @@
 @use 'variables' as *;
-@use 'extends' as *;
 
 .contact {
   padding: 1.5rem;
-  background: white;
+  background: $white-color;
 
   @media (min-width: 1024px) {
     padding: 2rem;
@@ -12,13 +11,13 @@
   &__title {
     font-size: 1.875rem;
     font-weight: bold;
-    color: #1f2937;
+    color: $secondary-color;
   }
 
   &__description {
     margin-top: 1.5rem;
     font-size: 1.125rem;
-    color: #4b5563;
+    color: $gray-color;
   }
 
   &__info {
@@ -31,11 +30,11 @@
   &__detail {
     font-size: 1rem;
     line-height: 1.75;
-    color: #4b5563;
+    color: $gray-color;
 
     &--link {
       &:hover {
-        color: #1f2937;
+        color: $secondary-color;
       }
     }
   }
@@ -123,15 +122,18 @@
       }
     }
 
+    %error-message {
+      color: $red-color;
+      font-size: 12px;
+      height: 15px;
+      margin-top: 5px;
+      text-align: center;
+    }
+
     .error-message {
       @extend %error-message;
       text-align: left;
     }
 
-    button {
-      @extend %base-button;
-      margin-top: 32px;
-      align-self: end;
-    }
   }
 }

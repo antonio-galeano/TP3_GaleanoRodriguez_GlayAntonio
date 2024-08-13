@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mainContent = document.querySelector('.main-content-section');
 
     menuButton.addEventListener('click', function () {
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        const isExpanded = this.getAttribute('aria-expanded') === 'false';
         this.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('hidden');
         mainContent.classList.toggle('mt-40');
