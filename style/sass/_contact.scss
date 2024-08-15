@@ -11,13 +11,13 @@
   &__title {
     font-size: 1.875rem;
     font-weight: bold;
-    color: $secondary-color;
+    color: $gray-color-600;
   }
 
   &__description {
     margin-top: 1.5rem;
     font-size: 1.125rem;
-    color: $gray-color;
+    color: $gray-color-600;
   }
 
   &__info {
@@ -30,7 +30,7 @@
   &__detail {
     font-size: 1rem;
     line-height: 1.75;
-    color: $gray-color;
+    color: $gray-color-600;
 
     &--link {
       &:hover {

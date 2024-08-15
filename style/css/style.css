@@ -10,12 +10,12 @@
 .contact__title {
   font-size: 1.875rem;
   font-weight: bold;
-  color: #2d3e50;
+  color: #4B5563;
 }
 .contact__description {
   margin-top: 1.5rem;
   font-size: 1.125rem;
-  color: #d9d9d9;
+  color: #4B5563;
 }
 .contact__info {
   margin-top: 2.5rem;
@@ -26,7 +26,7 @@
 .contact__detail {
   font-size: 1rem;
   line-height: 1.75;
-  color: #d9d9d9;
+  color: #4B5563;
 }
 .contact__detail--link:hover {
   color: #2d3e50;
