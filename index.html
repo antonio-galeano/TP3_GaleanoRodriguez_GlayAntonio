@@ -10,7 +10,11 @@
 </head>
 
 <body>
-  <!-- ====== Header Section ====== -->
+  <a href="#maincontent"
+    class="absolute left-[-999px] focus:left-0 focus:top-0 focus:bg-blue-700 focus:text-white focus:p-4 focus:z-50">
+    Passer au contenu principal
+  </a>
+  <!-- ====== Navigation and Branding Section ====== -->
   <header class="bg-white">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <a href="#" class="-m-1.5 p-1.5">
@@ -66,399 +70,429 @@
       </div>
     </div>
   </header>
-  <!-- ====== Header Section End ====== -->
+  <!-- ====== Navigation and Branding Section End ====== -->
 
-  <main>
-    <!-- ====== Hero Section ====== -->
-    <div class="relative isolate main-content-section">
-      <div class="overflow-hidden">
-        <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-0">
-          <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-            <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 class="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl">
-                Bienvenue sur Cuisine Facile!
-              </h1>
-              <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                Explorez nos recettes faciles et rapides pour des repas délicieux et sans tracas. Que vous soyez
-                débutant ou chef expérimenté, trouvez l'inspiration culinaire ici.
-              </p>
-              <div class="mt-10 flex items-center gap-x-6">
-                <a href="#"
-                  class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Découvrez
-                  plus</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">En savoir plus <span
-                    aria-hidden="true">→</span></a>
+  <main id="maincontent">
+    <!-- ====== Welcome Section ====== -->
+    <section>
+      <div class="relative isolate main-content-section">
+        <div class="overflow-hidden">
+          <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-0">
+            <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+              <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl">
+                  Bienvenue sur Cuisine Facile!
+                </h1>
+                <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                  Explorez nos recettes faciles et rapides pour des repas délicieux et sans tracas. Que vous soyez
+                  débutant ou chef expérimenté, trouvez l'inspiration culinaire ici.
+                </p>
+                <div class="mt-10 flex items-center gap-x-6">
+                  <a href="#"
+                    class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Découvrez
+                    plus</a>
+                  <a href="#" class="text-sm font-semibold leading-6 text-gray-900">En savoir plus <span
+                      aria-hidden="true">→</span></a>
+                </div>
+              </div>
+              <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                <div
+                  class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <a href="#" class="relative block">
+                    <img src="img/hero/vegetarien.jpg" alt="Image d'un plat végétarien"
+                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                      Végétarien
+                    </div>
+                  </a>
+                </div>
+                <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                  <a href="#" class="relative block">
+                    <img src="img/hero/soupes.jpg" alt="Image d'une soupe"
+                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                      Soupes
+                    </div>
+                  </a>
+                  <a href="#" class="relative block">
+                    <img src="img/hero/salades.jpg" alt="Image d'une salade"
+                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                      Salades
+                    </div>
+                  </a>
+                </div>
+                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0 lg:pt-36">
+                  <a href="#" class="relative block">
+                    <img src="img/hero/desserts.jpg" alt="Image d'un dessert"
+                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                      Desserts
+                    </div>
+                  </a>
+                  <a href="#" class="relative block">
+                    <img src="img/hero/populaires.jpg" alt="Image d'un plat populaire"
+                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
+                      Populaire
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-              <div
-                class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                <a href="#" class="relative block">
-                  <img src="img/hero/vegetarian.jpg" alt=""
-                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
-                    Végétarien
-                  </div>
-                </a>
-              </div>
-              <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                <a href="#" class="relative block">
-                  <img src="img/hero/soups.jpg" alt=""
-                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
-                    Soupes
-                  </div>
-                </a>
-                <a href="#" class="relative block">
-                  <img src="img/hero/salads.jpg" alt=""
-                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
-                    Salades
-                  </div>
-                </a>
-              </div>
-              <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0 lg:pt-36">
-                <a href="#" class="relative block">
-                  <img src="img/hero/desserts.jpg" alt=""
-                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
-                    Desserts
-                  </div>
-                </a>
-                <a href="#" class="relative block">
-                  <img src="img/hero/popular.jpg" alt=""
-                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-60 text-white py-2 px-4 text-center">
-                    Populaire
-                  </div>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ====== Hero Section End ====== -->
+    </section>
+    <!-- ====== Welcome Section End ====== -->
 
-    <!-- ====== Media Logos Section ====== -->
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
-          Cuisine Facile® dans les médias
-        </h2>
-        <div
-          class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/1.png" alt="Transistor"
-            width="158" height="48" />
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/2.png" alt="Reform"
-            width="158" height="48" />
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/3.png" alt="Tuple"
-            width="158" height="48" />
-          <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="img/media/4.png"
-            alt="SavvyCal" width="158" height="48" />
-          <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-            src="img/media/5.png" alt="Statamic" width="158" height="48" />
-        </div>
-      </div>
-    </div>
-
-    <!-- ====== Media Logos Section End ====== -->
-
-    <!-- ====== Feature Section 1 ====== -->
-    <div class="overflow-hidden bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div class="lg:ml-auto lg:pl-4 lg:pt-4">
-            <div class="lg:max-w-lg">
-              <h2 class="text-base font-semibold leading-7 text-red-600">Savoureux Fromage</h2>
-              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-6text-red-60000 sm:text-4xl">
-                Recettes Ultra Fromagères
-              </p>
-              <p class="mt-6 text-lg leading-8 text-gray-600">
-                Succombez au charme de nos recettes gourmandes où le fromage est roi. De délicieuses croquettes fourrées
-                au fromage fondant à découvrir, idéales pour les amateurs de saveurs intenses et réconfortantes.
-              </p>
-              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Richesse Fromagère.
-                  </dt>
-                  <dd class="inline">
-                    Explorez la profondeur des saveurs avec nos croquettes au fromage, une recette parfaite pour tout
-                    rassemblement festif ou un dîner en famille.
-                  </dd>
-                </div>
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Simplicité et Goût.
-                  </dt>
-                  <dd class="inline">
-                    Des ingrédients simples, une préparation aisée et un résultat épatant, nos croquettes séduiront vos
-                    papilles à chaque bouchée.
-                  </dd>
-                </div>
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Parfait pour Partager.
-                  </dt>
-                  <dd class="inline">
-                    Chaque croquette est un petit trésor de goût, idéal pour partager lors de soirées conviviales ou
-                    comme encas savoureux.
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <div class="flex items-start justify-end lg:order-first">
-            <img src="img/features/1.jpeg" alt="Product screenshot"
-              class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432"
-              height="1442" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ====== Feature Section 1 End ====== -->
-
-    <!-- ====== Feature Section 2 ====== -->
-    <div class="overflow-hidden bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div class="lg:pr-8 lg:pt-4">
-            <div class="lg:max-w-lg">
-              <h2 class="text-base font-semibold leading-7 text-red-600">Recettes Thérapeutiques</h2>
-              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">
-                Recettes Saines pour Combattre l'Arthrite
-              </p>
-              <p class="mt-6 text-lg leading-8 text-gray-600">
-                Découvrez nos recettes enrichies en nutriments anti-inflammatoires, idéales pour soulager les symptômes
-                de l'arthrite. Profitez de plats à la fois savoureux et bénéfiques pour votre santé.-
-              </p>
-              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Richesse en Nutriments.
-                  </dt>
-                  <dd class="inline">
-                    Notre salade de cinq haricots est non seulement délicieuse mais aussi chargée de fibres, de
-                    protéines et d'antioxydants, tous reconnus pour leurs propriétés anti-inflammatoires qui peuvent
-                    aider à gérer l'arthrite.
-                  </dd>
-                </div>
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Fraîcheur et Saveur.
-                  </dt>
-                  <dd class="inline">
-                    Chaque ingrédient est sélectionné pour sa fraîcheur et ses bienfaits pour la santé, assurant une
-                    expérience gustative riche et une aide naturelle contre les douleurs articulaires.
-                  </dd>
-                </div>
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Idéal pour Tous les Repas
-                  </dt>
-                  <dd class="inline">
-                    Parfaite comme plat principal ou comme accompagnement, cette salade est versatile et peut être
-                    savourée à tout moment de la journée.
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <img src="img/features/2.jpeg" alt="Product screenshot"
-            class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-            width="2432" height="1442" />
-        </div>
-      </div>
-    </div>
-    <!-- ====== Feature Section 2 End ====== -->
-
-    <!-- ====== Feature Section 3 ====== -->
-    <div class="overflow-hidden bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div class="lg:ml-auto lg:pl-4 lg:pt-4">
-            <div class="lg:max-w-lg">
-              <h2 class="text-base font-semibold leading-7 text-red-600">Salades d'Été</h2>
-              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">
-                Recettes de Salades Estivales Faciles à Préparer
-              </p>
-              <p class="mt-6 text-lg leading-8 text-gray-600">
-                Rafraîchissez votre été avec nos salades légères et faciles à préparer. Parfaites comme accompagnement,
-                elles apportent une touche de fraîcheur à tous vos repas en plein air.
-              </p>
-              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Légèreté et Fraîcheur.
-                  </dt>
-                  <dd class="inline">
-                    Notre salade de tomate, oignon et concombre est l'incarnation de la simplicité estivale. Avec juste
-                    quelques ingrédients, elle offre un goût rafraîchissant qui complète parfaitement tout barbecue ou
-                    pique-nique.
-                  </dd>
-                </div>
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Préparation Rapide.
-                  </dt>
-                  <dd class="inline">
-                    En quelques minutes, assemblez cette salade colorée qui non seulement ravit les yeux mais aussi les
-                    palais. Idéale pour ceux qui cherchent à minimiser le temps passé en cuisine pendant les chauds mois
-                    d'été.
-                  </dd>
-                </div>
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
-                    <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-                    </svg>
-                    Versatilité.
-                  </dt>
-                  <dd class="inline">
-                    Adaptez cette base de salade selon vos goûts : ajoutez des herbes fraîches, des fromages ou des noix
-                    pour une touche personnalisée. Chaque variation est une nouvelle découverte gustative.
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <div class="flex items-start justify-end lg:order-first">
-            <img src="img/features/3.jpeg" alt="Product screenshot"
-              class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432"
-              height="1442" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ====== Feature Section 3 End ====== -->
-
-    <!-- ====== Feature Section 4 ====== -->
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl sm:text-center">
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">
-            Découvrez 'Great Bread'
-          </p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Bernice Hunt partage ses secrets pour réussir facilement presque tous types de pains.
-          </p>
-        </div>
-      </div>
-      <div class="relative overflow-hidden pt-16">
+    <!-- ====== Media Coverage Section ====== -->
+    <section>
+      <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <img src="img/features/book.jpg" alt="App screenshot"
-            class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432" height="1442" />
-          <div class="relative" aria-hidden="true">
-            <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"></div>
+          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
+            Cuisine Facile® dans les médias
+          </h2>
+          <div
+            class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/events.png"
+              alt="Logo de l'entreprise Events" width="158" height="48" />
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/rtl.png"
+              alt="Logo de l'entreprise RTL" width="158" height="48" />
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/media/design.png"
+              alt="Logo de l'entreprise Design" width="158" height="48" />
+            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="img/media/vox.png"
+              alt="Logo de l'entreprise VOX" width="158" height="48" />
+            <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              src="img/media/2df.png" alt="Logo de l'entreprise 2DF" width="158" height="48" />
           </div>
         </div>
       </div>
-      <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-        <dl
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-          <div class="relative pl-9">
-            <dt class="inline font-semibold text-gray-900">
-              <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
-                  clip-rule="evenodd" />
-              </svg>
-              Simplicité Innovante.
-            </dt>
-            <dd class="inline">
-              Plongez dans le monde du pain fait maison avec une simplicité révolutionnaire. Ce livre offre des méthodes
-              accessibles pour créer une variété impressionnante de pains, adaptées à tous les niveaux de compétence.
-            </dd>
-          </div>
-          <div class="relative pl-9">
-            <dt class="inline font-semibold text-gray-900">
-              <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
-                  clip-rule="evenodd" />
-              </svg>
-              Ingrédients et Techniques.
-            </dt>
-            <dd class="inline">
-              Découvrez les ingrédients clés et les techniques qui rendent la boulangerie à domicile non seulement
-              possible mais aussi un plaisir. Bernice Hunt dévoile des astuces testées pour garantir des résultats
-              parfaits à chaque fois.
-            </dd>
-          </div>
-          <div class="relative pl-9">
-            <dt class="inline font-semibold text-gray-900">
-              <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
-                aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
-                  clip-rule="evenodd" />
-              </svg>
-              Idéal pour les Amateurs et les Experts.
-            </dt>
-            <dd class="inline">
-              Que vous soyez un novice enthousiaste ou un boulanger expérimenté, 'Great Bread' est conçu pour inspirer
-              et faciliter la boulangerie à tous les niveaux. Embarquez dans une aventure culinaire où le pain frais est
-              à portée de main.
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
+    </section>
+    <!-- ====== Media Coverage Section End ====== -->
 
-    <!-- ====== Feature Section 4 End ====== -->
+    <!-- ====== Cheese Recipes Section ====== -->
+    <section>
+      <div class="overflow-hidden bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base font-semibold leading-7 text-red-600">Savoureux Fromage</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-6text-red-60000 sm:text-4xl">
+                  Recettes Ultra Fromagères
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Succombez au charme de nos recettes gourmandes où le fromage est roi. De délicieuses croquettes
+                  fourrées
+                  au fromage fondant à découvrir, idéales pour les amateurs de saveurs intenses et réconfortantes.
+                </p>
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Richesse Fromagère.
+                    </dt>
+                    <dd class="inline">
+                      Explorez la profondeur des saveurs avec nos croquettes au fromage, une recette parfaite pour tout
+                      rassemblement festif ou un dîner en famille.
+                    </dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Simplicité et Goût.
+                    </dt>
+                    <dd class="inline">
+                      Des ingrédients simples, une préparation aisée et un résultat épatant, nos croquettes séduiront
+                      vos
+                      papilles à chaque bouchée.
+                    </dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Parfait pour Partager.
+                    </dt>
+                    <dd class="inline">
+                      Chaque croquette est un petit trésor de goût, idéal pour partager lors de soirées conviviales ou
+                      comme encas savoureux.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="flex items-start justify-end lg:order-first">
+              <img src="img/features/recette-fromage.jpeg" alt="Image d'un plat de croquettes au fromage"
+                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432"
+                height="1442" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Cheese Recipes Section End ====== -->
+
+    <!-- ====== Therapeutic Recipes Section ====== -->
+    <section>
+      <div class="overflow-hidden bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base font-semibold leading-7 text-red-600">Recettes Thérapeutiques</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">
+                  Recettes Saines pour Combattre l'Arthrite
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Découvrez nos recettes enrichies en nutriments anti-inflammatoires, idéales pour soulager les
+                  symptômes
+                  de l'arthrite. Profitez de plats à la fois savoureux et bénéfiques pour votre santé.-
+                </p>
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Richesse en Nutriments.
+                    </dt>
+                    <dd class="inline">
+                      Notre salade de cinq haricots est non seulement délicieuse mais aussi chargée de fibres, de
+                      protéines et d'antioxydants, tous reconnus pour leurs propriétés anti-inflammatoires qui peuvent
+                      aider à gérer l'arthrite.
+                    </dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Fraîcheur et Saveur.
+                    </dt>
+                    <dd class="inline">
+                      Chaque ingrédient est sélectionné pour sa fraîcheur et ses bienfaits pour la santé, assurant une
+                      expérience gustative riche et une aide naturelle contre les douleurs articulaires.
+                    </dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Idéal pour Tous les Repas
+                    </dt>
+                    <dd class="inline">
+                      Parfaite comme plat principal ou comme accompagnement, cette salade est versatile et peut être
+                      savourée à tout moment de la journée.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <img src="img/features/recette-haricots.jpeg" alt="Image d'un plat de salade de haricots"
+              class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+              width="2432" height="1442" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Therapeutic Recipes Section End ====== -->
+
+    <!-- ====== Summer Salad Recipes Section ====== -->
+    <section>
+      <div class="overflow-hidden bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base font-semibold leading-7 text-red-600">Salades d'Été</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">
+                  Recettes de Salades Estivales Faciles à Préparer
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Rafraîchissez votre été avec nos salades légères et faciles à préparer. Parfaites comme
+                  accompagnement,
+                  elles apportent une touche de fraîcheur à tous vos repas en plein air.
+                </p>
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Légèreté et Fraîcheur.
+                    </dt>
+                    <dd class="inline">
+                      Notre salade de tomate, oignon et concombre est l'incarnation de la simplicité estivale. Avec
+                      juste
+                      quelques ingrédients, elle offre un goût rafraîchissant qui complète parfaitement tout barbecue ou
+                      pique-nique.
+                    </dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Préparation Rapide.
+                    </dt>
+                    <dd class="inline">
+                      En quelques minutes, assemblez cette salade colorée qui non seulement ravit les yeux mais aussi
+                      les
+                      palais. Idéale pour ceux qui cherchent à minimiser le temps passé en cuisine pendant les chauds
+                      mois
+                      d'été.
+                    </dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Versatilité.
+                    </dt>
+                    <dd class="inline">
+                      Adaptez cette base de salade selon vos goûts : ajoutez des herbes fraîches, des fromages ou des
+                      noix
+                      pour une touche personnalisée. Chaque variation est une nouvelle découverte gustative.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="flex items-start justify-end lg:order-first">
+              <img src="img/features/recette-estivale.jpeg" alt="Image d'un plat de salade estivale"
+                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432"
+                height="1442" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Summer Salad Recipes End ====== -->
+
+    <!-- ====== Great Bread Book Section ====== -->
+    <section>
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl sm:text-center">
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">
+              Découvrez 'Great Bread'
+            </p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Bernice Hunt partage ses secrets pour réussir facilement presque tous types de pains.
+            </p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden pt-16">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <img src="img/features/livre.jpg" alt="Image du livre Great Bread"
+              class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432" height="1442" />
+            <div class="relative" aria-hidden="true">
+              <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+          <dl
+            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                    clip-rule="evenodd" />
+                </svg>
+                Simplicité Innovante.
+              </dt>
+              <dd class="inline">
+                Plongez dans le monde du pain fait maison avec une simplicité révolutionnaire. Ce livre offre des
+                méthodes
+                accessibles pour créer une variété impressionnante de pains, adaptées à tous les niveaux de compétence.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                    clip-rule="evenodd" />
+                </svg>
+                Ingrédients et Techniques.
+              </dt>
+              <dd class="inline">
+                Découvrez les ingrédients clés et les techniques qui rendent la boulangerie à domicile non seulement
+                possible mais aussi un plaisir. Bernice Hunt dévoile des astuces testées pour garantir des résultats
+                parfaits à chaque fois.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                    clip-rule="evenodd" />
+                </svg>
+                Idéal pour les Amateurs et les Experts.
+              </dt>
+              <dd class="inline">
+                Que vous soyez un novice enthousiaste ou un boulanger expérimenté, 'Great Bread' est conçu pour inspirer
+                et faciliter la boulangerie à tous les niveaux. Embarquez dans une aventure culinaire où le pain frais
+                est
+                à portée de main.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Great Bread Book Section End ====== -->
   </main>
 
   <!-- ====== Footer Section -->
@@ -466,7 +500,7 @@
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-        <img class="h-7" src="img/logo.png" alt="Loremes name" />
+        <img class="h-7" src="img/logo.png" alt="Logo de Cuisine Facile" />
         <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
