@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mode Hors Ligne - Cuisine Facile</title>
+    <meta name="description" content="Vous êtes actuellement hors ligne." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d32f2f">
+    <!-- Add iOS meta tags and icons for Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Cuisine Facile">
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/css/normalize.css">
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <a href="#maincontent"
+        class="absolute left-[-999px] focus:left-0 focus:top-0 focus:bg-blue-700 focus:text-white focus:p-4 focus:z-50">
+        Passer au contenu principal
+    </a>
+    <!-- ====== Navigation and Branding Section Section ====== -->
+    <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Cuisine Facile</span>
+                <img class="h-8 w-auto" src="img/logo.png" alt="Logo de Cuisine Facile" />
+            </a>
+            <div class="flex lg:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="index.html" class="text-base font-semibold leading-6 text-gray-900">Accueil</a>
+                <a href="recettes.html" class="text-base font-semibold leading-6 text-gray-900">Recettes</a>
+                <a href="#" class="text-base font-semibold leading-6 text-gray-900">À propos</a>
+                <a href="#" class="text-base font-semibold leading-6 text-gray-900">Se connecter <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="lg:hidden hidden" id="mobile-menu" role="dialog" aria-modal="true">
+            <div
+                class="absolute top-14 inset-x-0 z-20 bg-white shadow-md transition-all transform origin-top-right overflow-y-auto max-h-[75vh]">
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="-m-1.5 p-1.5"> </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            <span class="sr-only">Close menu</span>
+                        </button>
+                    </div>
+                    <div class="mt-3 space-y-1">
+                        <a href="index.html"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Accueil</a>
+                        <a href="recettes.html"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Recettes</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">À
+                            propos</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Se
+                            connecter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ====== Navigation and Branding Section End ====== -->
+
+    <main id="maincontent">
+        <!-- ====== Main Section -->
+        <section>
+            <!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full">
+  <body class="h-full">
+  ```
+-->
+            <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+                <div class="text-center">
+                    <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Vous êtes actuellement hors ligne</h1>
+                    <p class="mt-6 text-base leading-7 text-gray-600">Cette page est une version hors ligne de Cuisine Facile, où vous pouvez accéder à des informations de base.</p>
+                    <p class="mt-6 text-base leading-7 text-gray-600">Reconnectez-vous pour accéder à plus de fonctionnalités et contenu.</p>
+                </div>
+            </main>
+
+        </section>
+        <!-- ====== Main Section End-->
+    </main>
+
+    <!-- ====== Footer Section -->
+    <footer class="bg-gray-100" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <img class="h-7" src="img/logo.png" alt="Logo de Cuisine Facile" />
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                LIENS UTILES
+                            </h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">>
+                                        Accueil</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">>
+                                        Recettes</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">> À
+                                        propos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                RESSOURCES
+                            </h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">L'Art de la
+                                        Table</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Cuisine
+                                        Végétarienne</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Photographie
+                                        Culinaire</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                CONFIDENTIALITÉ
+                            </h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Vie
+                                        Privée</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Gestion des
+                                        cookies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                LANGUE DU SITE
+                            </h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Français</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">English</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Español</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== Footer Section End -->
+</body>
+
+</html>

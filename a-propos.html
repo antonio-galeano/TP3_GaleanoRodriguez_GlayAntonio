@@ -7,15 +7,24 @@
   <meta name="description"
     content="Découvrez l'histoire de Cuisine Facile et notre passion pour la cuisine. Rencontrez notre équipe et apprenez-en plus sur notre mission." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#d32f2f">
+  <!-- Add iOS meta tags and icons for Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Cuisine Facile">
+  <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style/css/normalize.css">
   <link rel="stylesheet" href="style/css/style.css">
+  <link rel="manifest" href="/manifest.json">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/script.js" defer></script>
+  <script src="js/install.js" defer></script>
 </head>
 
 <body>
-  <a href="#maincontent" class="absolute left-[-999px] focus:left-0 focus:top-0 focus:bg-blue-700 focus:text-white focus:p-4 focus:z-50">
+  <a href="#maincontent"
+    class="absolute left-[-999px] focus:left-0 focus:top-0 focus:bg-blue-700 focus:text-white focus:p-4 focus:z-50">
     Passer au contenu principal
   </a>
   <!-- ====== Navigation and Branding Section Section ====== -->
@@ -77,6 +86,7 @@
   <!-- ====== Navigation and Branding Section End ====== -->
 
   <main id="maincontent">
+    <button class="nav-link px-lg-4 px-2" id="butInstall" aria-label="Install" hidden>Installer la PWA</button>
     <!-- ====== About Us: Our Mission and Values Section -->
     <section>
       <div class="bg-white py-24 sm:py-32 main-content-section">

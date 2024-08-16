@@ -1,3 +1,13 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+        .then((reg) => {
+            console.log('Service worker registered.', reg);
+        });
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuButton = document.querySelector('button[aria-controls="mobile-menu"]');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -17,13 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         mainContent.classList.remove('mt-40');
     });
 });
-
-
-
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
