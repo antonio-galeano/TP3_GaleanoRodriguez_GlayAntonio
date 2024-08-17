@@ -49,7 +49,7 @@ self.addEventListener("fetch", (evt) => {
         fetch(evt.request).catch(() => {
             return caches.open(CACHE_NAME).then((cache) => {
                 return cache.match(evt.request).then((response) => {
-                    return response || cache.match("/offline.html");
+                    return response || cache.match("offline.html");
                 });
             });
         })
