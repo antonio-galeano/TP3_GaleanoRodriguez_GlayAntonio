@@ -1,14 +1,15 @@
 const CACHE_NAME = "static-cache-v1";
 const FILES_TO_CACHE = [
-    "/index.html",
-    "/recettes.html",
-    "/a-propos.html",
+    "index.html",
+    "recettes.html",
+    "a-propos.html",
     "/style/css/normalize.css",
     "/style/css/style.css",
     "/img/logo.png",
     "/img/icons/icon-192x192.png",
     "/js/script.js",
-    "/offline.html",
+    "/js/contact.js",
+    "offline.html",
 ];
 
 self.addEventListener("install", (evt) => {
