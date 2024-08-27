@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
 
+        var isValid = true;
+
         var firstName = document.getElementById('firstName');
         var lastName = document.getElementById('lastName');
         var email = document.getElementById('email');
@@ -12,34 +14,43 @@ document.addEventListener('DOMContentLoaded', function () {
         var zip = document.getElementById('zip');
         var message = document.getElementById('message');
 
-        clearContactFormErrors(); 
+        clearContactFormErrors();
 
-        validateField(lastName, "Le nom de famille est obligatoire.");
-        validateField(firstName, "Le prénom est obligatoire.");
-        validateEmailField(email, "L'adresse électronique est obligatoire.", "L'adresse électronique n'est pas valide.");
-        validateField(phone, "Le # de téléphone est obligatoire.");
-        validateField(address, "L'adresse est obligatoire.");
-        validateField(city, "La ville est obligatoire.");
-        validateField(state, "L'état/province est obligatoire.");
-        validateField(zip, "Le code postal est obligatoire.");
-        validateField(message, "Le message est obligatoire.");
+        isValid &= validateField(lastName, "Le nom de famille est obligatoire.");
+        isValid &= validateField(firstName, "Le prénom est obligatoire.");
+        isValid &= validateEmailField(email, "L'adresse électronique est obligatoire.", "L'adresse électronique n'est pas valide.");
+        isValid &= validateField(phone, "Le # de téléphone est obligatoire.");
+        isValid &= validateField(address, "L'adresse est obligatoire.");
+        isValid &= validateField(city, "La ville est obligatoire.");
+        isValid &= validateField(state, "L'état/province est obligatoire.");
+        isValid &= validateField(zip, "Le code postal est obligatoire.");
+        isValid &= validateField(message, "Le message est obligatoire.");
+
+        if (isValid) {
+            window.location.href = 'confirmation.html';
+        }
     });
 
     function validateField(input, emptyMsg) {
         if (!input.value.trim()) {
             showError(input, emptyMsg);
+            return false;
         } else {
             showSuccess(input);
+            return true;
         }
     }
 
     function validateEmailField(input, emptyMsg, invalidMsg) {
         if (!input.value.trim()) {
             showError(input, emptyMsg);
+            return false;
         } else if (!validateEmail(input.value)) {
             showError(input, invalidMsg);
+            return false;
         } else {
             showSuccess(input);
+            return true;
         }
     }
 
@@ -59,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (existingError) {
             existingError.remove();
         }
+        input.classList.remove('error');
     }
 
     function clearContactFormErrors() {
@@ -74,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputs = container.querySelectorAll('input.error, textarea.error');
         inputs.forEach(function (input) {
             input.classList.remove('error');
-            input.style.borderColor = 'gray';
+            input.style.borderColor = 'initial';
         });
     }
 
